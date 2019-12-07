@@ -43,7 +43,7 @@ module.exports = merge(common, {
       filename: '[name].css'
     }),
     new HtmlWebpackPlugin({
-      template: './src/template.html',
+      template: './app/pages/templates/default.html',
       output: 'index.html'
     })
   ]

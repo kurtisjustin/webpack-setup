@@ -1,9 +1,6 @@
-const path = require('path');
-
 module.exports = {
   entry: {
-    main: './src/index.js',
-    vendor: './src/vendor.js'
+    main: './app/App.js'
   },
   module: {
     rules: [
@@ -12,6 +9,12 @@ module.exports = {
         use: ['html-loader']
       },
       {
+        // Make sure to optimise this for prod/dev
+        test: /\.js$/,
+        use: 'babel-loader'
+      },
+      {
+        // Make sure to optimise this for prod/dev
         test: /\.(jpg|jpeg|png|svg|gif)$/,
         use: [
           {
